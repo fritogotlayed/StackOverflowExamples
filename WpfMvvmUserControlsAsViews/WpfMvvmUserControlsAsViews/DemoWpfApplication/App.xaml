@@ -1,0 +1,24 @@
+﻿<Application x:Class="DemoWpfApplication.App"
+             StartupUri="Views\MainView.xaml"
+             d1p1:Ignorable="d"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:d1p1="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:views="clr-namespace:DemoWpfApplication.Views"
+             xmlns:ViewModels="clr-namespace:DemoWpfApplication.ViewModel">
+  <Application.Resources>
+    <ResourceDictionary>
+      <vm:ViewModelLocator x:Key="Locator" d:IsDataSource="True" xmlns:vm="clr-namespace:DemoWpfApplication.ViewModel" />
+            <DataTemplate DataType="{x:Type ViewModels:MainViewModel}">
+                <views:MainView />
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type ViewModels:PersonViewModel}">
+                <views:PersonView />
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type ViewModels:CompanyViewModel}">
+                <views:CompanyView />
+            </DataTemplate>
+        </ResourceDictionary>
+  </Application.Resources>
+</Application>

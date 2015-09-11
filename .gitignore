@@ -6,6 +6,7 @@
 *.user
 *.userosscache
 *.sln.docstates
+.vs/
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
@@ -102,6 +103,7 @@ _TeamCity*
 # NCrunch
 _NCrunch_*
 .*crunch*.local.xml
+*ncrunch*
 
 # MightyMoose
 *.mm.*
